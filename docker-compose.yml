@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: metafix-runner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: metafix-runner
+    volumes:
+      - ./flux:/opt/metafix-runner/flux
+      - ./output:/opt/metafix-runner/output
